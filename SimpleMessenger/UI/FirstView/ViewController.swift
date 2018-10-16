@@ -24,6 +24,10 @@ class ViewController: UIViewController {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
+    override func viewDidLayoutSubviews() {
+        reArrange()
+    }
+
 
 
 
@@ -37,6 +41,10 @@ extension ViewController:UITextFieldDelegate{
         buttonCustomizer()
         gradiantAdder()
         loadingAnimationWithLottie()
+    }
+    func reArrange()  {
+        nameTextField.frame.origin.y = animationView.frame.origin.y+animationView.frame.size.height+16
+        enterButton.frame.origin.y = nameTextField.frame.origin.y+nameTextField.frame.size.height+16
     }
     func gradiantAdder() {
         let gradient = CAGradientLayer()

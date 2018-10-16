@@ -9,7 +9,7 @@
 import UIKit
 
 class ChatViewController: UIViewController {
-
+    var name: String?
     override func viewDidLoad() {
         super.viewDidLoad()
 

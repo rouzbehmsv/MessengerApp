@@ -7,11 +7,15 @@
 //
 
 import UIKit
-
+import Lottie
 class ViewController: UIViewController {
-
+    var animationView:LOTAnimationView!
+    
+    @IBOutlet weak var nameTextField: UITextField!
+    @IBOutlet weak var enterButton: UIButton!
     override func viewDidLoad() {
         super.viewDidLoad()
+        initializer()
         // Do any additional setup after loading the view, typically from a nib.
     }
 
@@ -21,5 +25,32 @@ class ViewController: UIViewController {
     }
 
 
+
+}
+extension ViewController:UITextFieldDelegate{
+    func initializer()  {
+        enterButton.addTarget(self, action: #selector(gotoChat), for: .touchUpInside)
+        nameTextField.delegate = self
+        enterButton.isEnabled = false
+        enterButton.isHidden = true
+        loadingAnimationWithLottie()
+    }
+    func loadingAnimationWithLottie() {
+        animationView = LOTAnimationView(name: "rate_us")
+        //        animationView.backgroundColor = UIColor.lightGray
+        animationView.frame = CGRect (x: self.view.frame.size.width/4, y: 70, width: self.view.frame.size.width/2, height: self.view.frame.size.width/2)
+        self.view.addSubview(animationView)
+        animationView.play{ (finished) in
+            
+            // Do Something
+        }
+        animationView.loopAnimation = true
+    }
+    @objc func gotoChat(){
+        let storyBoard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
+        let newViewController = storyBoard.instantiateViewController(withIdentifier: "chatViewController") as! ChatViewController
+        newViewController.name = nameTextField.text
+        self.navigationController?.pushViewController(newViewController, animated: true)
+    }
 }
 

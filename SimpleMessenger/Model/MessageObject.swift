@@ -19,3 +19,24 @@ struct Member {
     let name: String
     
 }
+extension Member {
+    var toJSON: [String:Any] {
+        return [
+            "name": name,
+        ]
+    }
+    
+    init?(fromJSON json: Any) {
+        guard
+            let data = json as? [String: Any],
+            let name = data["name"] as? String
+            else {
+                print("Couldn't parse Member")
+                return nil
+        }
+        
+        self.name = name
+        
+    }
+}
+

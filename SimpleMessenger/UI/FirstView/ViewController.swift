@@ -34,7 +34,23 @@ extension ViewController:UITextFieldDelegate{
         nameTextField.delegate = self
         enterButton.isEnabled = false
         enterButton.isHidden = true
+        buttonCustomizer()
+        gradiantAdder()
         loadingAnimationWithLottie()
+    }
+    func gradiantAdder() {
+        let gradient = CAGradientLayer()
+        
+        gradient.frame = view.bounds
+        gradient.colors = [UIColor.white.cgColor, UIColor.blue.cgColor]
+        
+        self.view.layer.insertSublayer(gradient, at: 0)
+    }
+    func buttonCustomizer()  {
+        enterButton.layer.cornerRadius = 5.0
+        enterButton.setTitleColor(UIColor.white, for: .normal)
+        enterButton.backgroundColor = self.navigationController?.navigationBar.backgroundColor
+        enterButton.layer.borderWidth = 2.0
     }
     func textFieldDidBeginEditing(_ textField: UITextField) {
         enterButton.isEnabled = true
@@ -57,7 +73,7 @@ extension ViewController:UITextFieldDelegate{
     }
     @objc func gotoChat(){
         let storyBoard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
-        let newViewController = storyBoard.instantiateViewController(withIdentifier: "chatViewController") as! ChatViewController
+        let newViewController = storyBoard.instantiateViewController(withIdentifier: "ChatViewController") as! ChatViewController
         newViewController.name = nameTextField.text
         self.navigationController?.pushViewController(newViewController, animated: true)
     }

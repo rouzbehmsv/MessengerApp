@@ -15,7 +15,7 @@ class ChatViewController: MessagesViewController {
     var member: Member!
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        initializer()
         // Do any additional setup after loading the view.
     }
 

@@ -22,6 +22,10 @@
 		D51A3DD22175EB190007BC4C /* MessageObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = D51A3DD12175EB190007BC4C /* MessageObject.swift */; };
 		D51A3DD42175EBA20007BC4C /* messageExtention.swift in Sources */ = {isa = PBXBuildFile; fileRef = D51A3DD32175EBA20007BC4C /* messageExtention.swift */; };
 		D51A3DD62175F0790007BC4C /* ServiceExtention.swift in Sources */ = {isa = PBXBuildFile; fileRef = D51A3DD52175F0790007BC4C /* ServiceExtention.swift */; };
+		D51A3DD82175F6330007BC4C /* ChatViewControllerExtention.swift in Sources */ = {isa = PBXBuildFile; fileRef = D51A3DD72175F6330007BC4C /* ChatViewControllerExtention.swift */; };
+		D51A3DDA2175FA540007BC4C /* sendICON.png in Resources */ = {isa = PBXBuildFile; fileRef = D51A3DD92175FA540007BC4C /* sendICON.png */; };
+		D51A3DDC217606690007BC4C /* avatarImage.png in Resources */ = {isa = PBXBuildFile; fileRef = D51A3DDB217606680007BC4C /* avatarImage.png */; };
+		D51A3DDE217607A10007BC4C /* chatBackground.jpg in Resources */ = {isa = PBXBuildFile; fileRef = D51A3DDD217607A10007BC4C /* chatBackground.jpg */; };
 		E6E1CAA5C204C2DF498FE8D6 /* Pods_SimpleMessengerTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D5D3FA3B2EAF4FE9387327F9 /* Pods_SimpleMessengerTests.framework */; };
 /* End PBXBuildFile section */
 
@@ -70,6 +74,10 @@
 		D51A3DD12175EB190007BC4C /* MessageObject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageObject.swift; sourceTree = "<group>"; };
 		D51A3DD32175EBA20007BC4C /* messageExtention.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = messageExtention.swift; sourceTree = "<group>"; };
 		D51A3DD52175F0790007BC4C /* ServiceExtention.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceExtention.swift; sourceTree = "<group>"; };
+		D51A3DD72175F6330007BC4C /* ChatViewControllerExtention.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatViewControllerExtention.swift; sourceTree = "<group>"; };
+		D51A3DD92175FA540007BC4C /* sendICON.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = sendICON.png; sourceTree = "<group>"; };
+		D51A3DDB217606680007BC4C /* avatarImage.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = avatarImage.png; sourceTree = "<group>"; };
+		D51A3DDD217607A10007BC4C /* chatBackground.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = chatBackground.jpg; sourceTree = "<group>"; };
 		D5D3FA3B2EAF4FE9387327F9 /* Pods_SimpleMessengerTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SimpleMessengerTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -153,11 +161,14 @@
 				D51A3DCD2175EA740007BC4C /* API */,
 				D51A3DC62175E3CD0007BC4C /* UI */,
 				D51A3D982175E0B80007BC4C /* AppDelegate.swift */,
+				D51A3DDB217606680007BC4C /* avatarImage.png */,
+				D51A3DDD217607A10007BC4C /* chatBackground.jpg */,
 				D51A3D9C2175E0B80007BC4C /* Main.storyboard */,
 				D51A3D9F2175E0BA0007BC4C /* Assets.xcassets */,
 				D51A3DA12175E0BA0007BC4C /* LaunchScreen.storyboard */,
 				D51A3DA42175E0BA0007BC4C /* Info.plist */,
 				D51A3DCB2175E7D90007BC4C /* rate_us.json */,
+				D51A3DD92175FA540007BC4C /* sendICON.png */,
 			);
 			path = SimpleMessenger;
 			sourceTree = "<group>";
@@ -201,6 +212,7 @@
 			isa = PBXGroup;
 			children = (
 				D51A3DC92175E4190007BC4C /* ChatViewController.swift */,
+				D51A3DD72175F6330007BC4C /* ChatViewControllerExtention.swift */,
 			);
 			path = Chat;
 			sourceTree = "<group>";
@@ -336,9 +348,12 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D51A3DDC217606690007BC4C /* avatarImage.png in Resources */,
 				D51A3DA32175E0BA0007BC4C /* LaunchScreen.storyboard in Resources */,
+				D51A3DDA2175FA540007BC4C /* sendICON.png in Resources */,
 				D51A3DA02175E0BA0007BC4C /* Assets.xcassets in Resources */,
 				D51A3D9E2175E0B80007BC4C /* Main.storyboard in Resources */,
+				D51A3DDE217607A10007BC4C /* chatBackground.jpg in Resources */,
 				D51A3DCC2175E7D90007BC4C /* rate_us.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -523,6 +538,7 @@
 				D51A3D9B2175E0B80007BC4C /* ViewController.swift in Sources */,
 				D51A3DD62175F0790007BC4C /* ServiceExtention.swift in Sources */,
 				D51A3DCF2175EA830007BC4C /* Services.swift in Sources */,
+				D51A3DD82175F6330007BC4C /* ChatViewControllerExtention.swift in Sources */,
 				D51A3DD42175EBA20007BC4C /* messageExtention.swift in Sources */,
 				D51A3DD22175EB190007BC4C /* MessageObject.swift in Sources */,
 				D51A3DCA2175E4190007BC4C /* ChatViewController.swift in Sources */,

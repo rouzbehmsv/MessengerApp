@@ -30,6 +30,23 @@ class Services {
         chatRoom?.publish(message: message)
     }
 }
+extension Services: ScaledroneDelegate {
+    
+    func scaledroneDidConnect(scaledrone: Scaledrone, error: NSError?) {
+        print("Connected to Scaledrone")
+        chatRoom = scaledrone.subscribe(roomName: "observable-room")
+        chatRoom?.delegate = self
+    }
+    
+    func scaledroneDidReceiveError(scaledrone: Scaledrone, error: NSError?) {
+        print("Scaledrone error", error ?? "")
+    }
+    
+    func scaledroneDidDisconnect(scaledrone: Scaledrone, error: NSError?) {
+        print("Scaledrone disconnected", error ?? "")
+    }
+    
+}
 extension Services: ScaledroneRoomDelegate {
     
     func scaledroneRoomDidConnect(room: ScaledroneRoom, error: NSError?) {

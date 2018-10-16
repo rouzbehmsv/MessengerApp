@@ -26,12 +26,11 @@ extension Member {
         ]
     }
     
-    init?(fromJSON json: Any) {
+    init?(with json: Any) {
         guard
             let data = json as? [String: Any],
             let name = data["name"] as? String
             else {
-                print("Couldn't parse Member")
                 return nil
         }
         

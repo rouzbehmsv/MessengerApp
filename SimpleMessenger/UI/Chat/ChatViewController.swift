@@ -10,6 +10,9 @@ import UIKit
 import MessageKit
 class ChatViewController: MessagesViewController {
     var name: String?
+    var chatService: Services!
+    var messages: [Message] = []
+    var member: Member!
     override func viewDidLoad() {
         super.viewDidLoad()
 

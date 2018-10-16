@@ -1,5 +1,5 @@
 //
-//  ServiceExtention.swift
+//  ChatViewControllerExtention.swift
 //  SimpleMessenger
 //
 //  Created by Rouzbeh on 10/16/18.
@@ -7,7 +7,3 @@
 //
 
 import Foundation
-import Scaledrone
-
-
-

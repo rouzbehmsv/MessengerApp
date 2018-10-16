@@ -10,11 +10,12 @@ import UIKit
 import Lottie
 class ViewController: UIViewController {
     var animationView:LOTAnimationView!
-    
+    var tap: UITapGestureRecognizer!
     @IBOutlet weak var nameTextField: UITextField!
     @IBOutlet weak var enterButton: UIButton!
     override func viewDidLoad() {
         super.viewDidLoad()
+        tap = UITapGestureRecognizer(target: self, action: #selector(dismissKeyboard))
         initializer()
         // Do any additional setup after loading the view, typically from a nib.
     }
@@ -34,6 +35,14 @@ extension ViewController:UITextFieldDelegate{
         enterButton.isEnabled = false
         enterButton.isHidden = true
         loadingAnimationWithLottie()
+    }
+    func textFieldDidBeginEditing(_ textField: UITextField) {
+        enterButton.isEnabled = true
+        enterButton.isHidden = false
+        view.addGestureRecognizer(tap)
+    }
+    @objc  func dismissKeyboard() {
+        view.endEditing(true)
     }
     func loadingAnimationWithLottie() {
         animationView = LOTAnimationView(name: "rate_us")

@@ -9,10 +9,5 @@
 import Foundation
 import Scaledrone
 
-class Services {
-    private let scaledrone: Scaledrone
-    private let messageCallback: (Message)-> Void
-    
-    
-}
+
 

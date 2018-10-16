@@ -7,3 +7,15 @@
 //
 
 import Foundation
+import UIKit
+import MessageKit
+
+struct Message {
+    let member: Member
+    let text : String
+    let messageId : String
+}
+struct Member {
+    let name: String
+    
+}

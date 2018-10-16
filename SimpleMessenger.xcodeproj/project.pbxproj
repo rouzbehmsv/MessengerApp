@@ -18,6 +18,9 @@
 		D51A3DB92175E0BB0007BC4C /* SimpleMessengerUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D51A3DB82175E0BB0007BC4C /* SimpleMessengerUITests.swift */; };
 		D51A3DCA2175E4190007BC4C /* ChatViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D51A3DC92175E4190007BC4C /* ChatViewController.swift */; };
 		D51A3DCC2175E7D90007BC4C /* rate_us.json in Resources */ = {isa = PBXBuildFile; fileRef = D51A3DCB2175E7D90007BC4C /* rate_us.json */; };
+		D51A3DCF2175EA830007BC4C /* Services.swift in Sources */ = {isa = PBXBuildFile; fileRef = D51A3DCE2175EA830007BC4C /* Services.swift */; };
+		D51A3DD22175EB190007BC4C /* MessageObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = D51A3DD12175EB190007BC4C /* MessageObject.swift */; };
+		D51A3DD42175EBA20007BC4C /* messageExtention.swift in Sources */ = {isa = PBXBuildFile; fileRef = D51A3DD32175EBA20007BC4C /* messageExtention.swift */; };
 		E6E1CAA5C204C2DF498FE8D6 /* Pods_SimpleMessengerTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D5D3FA3B2EAF4FE9387327F9 /* Pods_SimpleMessengerTests.framework */; };
 /* End PBXBuildFile section */
 
@@ -62,6 +65,9 @@
 		D51A3DBA2175E0BB0007BC4C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D51A3DC92175E4190007BC4C /* ChatViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatViewController.swift; sourceTree = "<group>"; };
 		D51A3DCB2175E7D90007BC4C /* rate_us.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = rate_us.json; sourceTree = "<group>"; };
+		D51A3DCE2175EA830007BC4C /* Services.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Services.swift; sourceTree = "<group>"; };
+		D51A3DD12175EB190007BC4C /* MessageObject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageObject.swift; sourceTree = "<group>"; };
+		D51A3DD32175EBA20007BC4C /* messageExtention.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = messageExtention.swift; sourceTree = "<group>"; };
 		D5D3FA3B2EAF4FE9387327F9 /* Pods_SimpleMessengerTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SimpleMessengerTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -141,6 +147,8 @@
 		D51A3D972175E0B80007BC4C /* SimpleMessenger */ = {
 			isa = PBXGroup;
 			children = (
+				D51A3DD02175EB0A0007BC4C /* Model */,
+				D51A3DCD2175EA740007BC4C /* API */,
 				D51A3DC62175E3CD0007BC4C /* UI */,
 				D51A3D982175E0B80007BC4C /* AppDelegate.swift */,
 				D51A3D9C2175E0B80007BC4C /* Main.storyboard */,
@@ -193,6 +201,23 @@
 				D51A3DC92175E4190007BC4C /* ChatViewController.swift */,
 			);
 			path = Chat;
+			sourceTree = "<group>";
+		};
+		D51A3DCD2175EA740007BC4C /* API */ = {
+			isa = PBXGroup;
+			children = (
+				D51A3DCE2175EA830007BC4C /* Services.swift */,
+			);
+			path = API;
+			sourceTree = "<group>";
+		};
+		D51A3DD02175EB0A0007BC4C /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				D51A3DD12175EB190007BC4C /* MessageObject.swift */,
+				D51A3DD32175EBA20007BC4C /* messageExtention.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -493,6 +518,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				D51A3D9B2175E0B80007BC4C /* ViewController.swift in Sources */,
+				D51A3DCF2175EA830007BC4C /* Services.swift in Sources */,
+				D51A3DD42175EBA20007BC4C /* messageExtention.swift in Sources */,
+				D51A3DD22175EB190007BC4C /* MessageObject.swift in Sources */,
 				D51A3DCA2175E4190007BC4C /* ChatViewController.swift in Sources */,
 				D51A3D992175E0B80007BC4C /* AppDelegate.swift in Sources */,
 			);

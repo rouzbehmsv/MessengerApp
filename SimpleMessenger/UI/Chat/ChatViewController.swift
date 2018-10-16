@@ -7,8 +7,8 @@
 //
 
 import UIKit
-
-class ChatViewController: UIViewController {
+import MessageKit
+class ChatViewController: MessagesViewController {
     var name: String?
     override func viewDidLoad() {
         super.viewDidLoad()
